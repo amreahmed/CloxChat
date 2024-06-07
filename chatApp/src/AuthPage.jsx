@@ -6,7 +6,9 @@ const AuthPage = (props) => {
     e.preventDefault();
     const { value } = e.target[0];
     axios
-      .post("http://localhost:3001/authenticate", { username: value })
+      .post("https://70e25b6d-80a5-4e26-8479-5d6338cab092-00-2m1orqfnm7eqj.kirk.replit.dev/authenticate", {
+        username: value,
+      })
       .then((r) =>
         props.onAuth({ ...r.data, secret: "b6780019409e8d3bee5030a28ffef105b47792613511075c5ab3a32ad7ebae11" })
       )
